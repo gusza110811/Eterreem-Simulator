@@ -78,6 +78,7 @@ def buy_GPU(name, quality, price):
 
 def gpu_store():
     print("GPU store")
+    print(f"your current GPU: {GPU_name} \n Its quality: {GPU_quality}")
     print("warning: you can downgrade your GPU but it cant be undone")
     print("1. Intel 8bit GPU")
     print("2. Nvidia 8bit GPU")
@@ -245,21 +246,24 @@ def Game():
 
 def Menu():
     if __name__ != "__main__": return
-
-    print("select action")
-    print("1. new game")
-    print("2. load game")
-    print("3. exit")
-    choice = input(">>>")
-    global name
-    if choice == "1":
-        name = input("enter save name: ")
-        new_game(name)
-    elif choice == "2":
-        name = input("enter save name: ")
-        load_save(name)
-    elif choice == "3":
-        exit()
+    while True:
+        print("select action")
+        print("1. new game")
+        print("2. load game")
+        print("3. exit")
+        choice = input(">>>")
+        global name
+        if choice == "1":
+            name = input("enter save name: ")
+            new_game(name)
+        elif choice == "2":
+            name = input("enter save name: ")
+            try:
+                load_save(name)
+            except:
+                print("invalid name")
+        elif choice == "3":
+            exit()
 
 if __name__ == "__main__":
     Menu()
