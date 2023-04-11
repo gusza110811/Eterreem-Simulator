@@ -1,0 +1,89 @@
+[
+    {
+        "name":"Grandpa's Video Card","quality":1,"price":0
+    },
+    {
+        "name":"Intel Vega Ultra","quality":2,"price":120
+    },
+    {
+        "name":"Nvidia Zenith Titan","quality":4,"price":480
+    },
+    {
+        "name":"AMD Sapphire Fury","quality":16,"price":1920
+    },
+    {
+        "name":"Intel Aurora Pro", "quality":64, "price":7680
+    },
+    {
+        "name":"Nvidia Orion X","quality":128,"price":15360
+    },
+    {
+        "name":"AMD Ruby XTX","quality":256,"price":30720
+    },
+    {
+        "name":"Intel Phoenix Elite","quality": 1024,"price": 92160
+    },
+    {
+        "name":"Nvidia Aether RTX","quality":2048,"price": 230400
+    },
+    {
+        "name":"AMD Emerald RX","quality":4096,"price": 921600
+    },
+    {
+        "name":"Intel Blaze Pro","quality":8192,"price": 1843200
+    },
+    {
+        "name":"Nvidia Nebula Titan","quality":16384,"price": 3686400
+    },
+    {
+        "name":"AMD Topaz Fury","quality":32768,"price": 7372800
+    },
+    {
+        "name":"Intel Thunderbird Ultimate","quality":65536,"price": 14745600
+    },
+    {
+        "name":"Nvidia Hypernova Titan","quality":131072,"price": 29491200
+    },
+    {
+        "name":"AMD Jasper RX","quality":262144,"price": 58982400
+    },
+    {
+        "name":"Intel Nova Elite","quality":524288,"price": 117964800
+    },
+    {
+        "name":"Nvidia Helios RTX","quality":1048576,"price": 235929600
+    },
+    {
+        "name":"AMD Citrine Fury","quality":2097152,"price": 471859200
+    },
+    {
+        "name":"Samsung Sirius Pro","quality":4194304,"price": 943718400
+    },
+    {
+        "name":"Qualcomm Nebula Ultra","quality":8388608,"price": 1887436800
+    },
+    {
+        "name":"Apple Vega Ultimate","quality":16777216,"price": 3774873600
+    },
+    {
+        "name":"Asus Strix RX", "quality": 32768, "price": 4915200
+    },
+    {
+        "name":"Gigabyte Aorus XT", "quality": 65536, "price": 9830400
+    },
+    {
+        "name":"EVGA Hybrid RTX", "quality": 131072, "price": 19660800
+    },
+    {
+        "name":"MSI Ventus Pro", "quality": 262144, "price": 39321600
+    },
+    {
+        "name":"Zotac Trinity Titan", "quality": 524288, "price": 78643200
+    },
+    {
+        "name":"PNY XLR8 RX", "quality": 1048576, "price": 157286400
+    },
+    {
+        "name":"Sapphire Pulse Pro", "quality": 209715, "price":213452300
+    }
+]
