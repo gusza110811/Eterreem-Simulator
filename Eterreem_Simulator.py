@@ -97,7 +97,7 @@ def gpu_store():
 
         choice = int(input("what GPU do you want to buy? enter 0 to exit: "))
 
-        if choice == "0":
+        if choice == 0:
             break
 
         buy_GPU(GPU_list[choice]['name'],GPU_list[choice]['quality'],GPU_list[choice]['price'])
