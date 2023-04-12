@@ -157,8 +157,6 @@ def Menu():
                 load_save(name)
             except FileNotFoundError:
                 print("save not found")
-            except:
-                print("an unknown error has occured")
         elif choice == "3":
             exit()
 
