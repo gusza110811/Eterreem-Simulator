@@ -2,8 +2,6 @@ from os import mkdir
 import time
 import json
 
-GPU_list = []
-
 with open('resource/GPU.json', 'r') as file:
     GPU_list = json.load(file)
 
@@ -92,7 +90,7 @@ def gpu_store():
         print("GPU store")
         print(f"your current GPU: {GPU_name} \n Its quality: {GPU_quality}")
         print("warning: you can downgrade your GPU but it cantnot be undone")
-        for i in range (1,len(GPU_list)):
+        for i in range(1, len(GPU_list)):
             print(f"{i}. {GPU_list[i]['name']} price: {GPU_list[i]['price']} quality: {GPU_list[i]['quality']}")
 
         choice = int(input("what GPU do you want to buy? enter 0 to exit: "))
@@ -100,7 +98,7 @@ def gpu_store():
         if choice == 0:
             break
 
-        buy_GPU(GPU_list[choice]['name'],GPU_list[choice]['quality'],GPU_list[choice]['price'])
+        buy_GPU(GPU_list[choice]['name'], GPU_list[choice]['quality'], GPU_list[choice]['price'])
         break
 
 
@@ -115,7 +113,8 @@ def profile():
 
 def Game():
 
-    if __name__ != "__main__": return
+    if __name__ != "__main__":
+        return
 
     while 1:
         print("select action")
