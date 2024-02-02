@@ -25,30 +25,34 @@ def new_game(save_name):
 
 
 def load_save(save_name):
-    with open(f"saves/{save_name}/Eterreem.txt", "r") as Eterreem_r:
-        global Eterreem
-        Eterreem = int(Eterreem_r.read())
-    with open(f"saves/{save_name}/GPU_name.txt", "r") as GPU_name_r:
-        global GPU_name
-        GPU_name = str(GPU_name_r.read())
-    with open(f"saves/{save_name}/GPU_quality.txt", "r") as GPU_quality_r:
-        global GPU_quality
-        GPU_quality = int(GPU_quality_r.read())
+    global Eterreem
+    global GPU_name
+    global GPU_quality
+
+    with open(f"saves/{save_name}.json", "r") as save:
+
+        data = json.load(save)
+
+        Eterreem = data['eterreem']
+        GPU_name = data['gpu_name']
+        GPU_quality = data['gpu_quality']
+
     Game()
 
 
 def save_game(save_name):
-    try:
-        mkdir(f"saves/{save_name}")
-    except FileExistsError:
-        pass
+    global Eterreem
+    global GPU_name
+    global GPU_quality
 
-    with open(f"saves/{save_name}/Eterreem.txt", "w") as Eterreem_w:
-        Eterreem_w.write(str(Eterreem))
-    with open(f"saves/{save_name}/GPU_name.txt", "w") as GPU_name_w:
-        GPU_name_w.write(str(GPU_name))
-    with open(f"saves/{save_name}/GPU_quality.txt", "w") as GPU_quality_w:
-        GPU_quality_w.write(str(GPU_quality))
+    with open(f"saves/{save_name}/Eterreem.txt", "w") as save:
+        data = {
+            'eterreem': Eterreem,
+            'gpu_name': GPU_name,
+            'gpu_quality': GPU_quality
+        }
+
+        save.write(json.dumps(data,indent=4))
 
 
 def mine(amount):
