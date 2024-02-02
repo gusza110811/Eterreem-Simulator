@@ -5,4 +5,4 @@ echo Compiling game...
 set SRC_FILE=Eterreem_Simulator.py
 set APP_NAME="Eterreem_Simulator 0.2.1"
 
-pyinstaller --name %APP_NAME% %SRC_FILE%
+pyinstaller --onefile --name %APP_NAME% %SRC_FILE%
