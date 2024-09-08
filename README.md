@@ -3,6 +3,6 @@ Mine Eterreem, buy GPU, Repeat.
 
 You can download python here: https://www.python.org/downloads
 
-This game is very easy to cheat so expect people spamming "FREE MONEY HACK REAL". also, i have made a cheat program myself.
+This game is very easy to cheat so expect people spamming "FREE MONEY HACK REAL".
 
 if this game did get popular, I might do an update to make it harder to cheat.
