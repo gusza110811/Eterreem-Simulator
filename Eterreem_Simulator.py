@@ -1,4 +1,4 @@
-from os import mkdir
+import os
 import time
 import json
 
@@ -45,7 +45,7 @@ def save_game(save_name):
     global GPU_name
     global GPU_quality
 
-    with open(f"saves/{save_name}/Eterreem.txt", "w") as save:
+    with open(f"saves/{save_name}.json", "w") as save:
         data = {
             'eterreem': Eterreem,
             'gpu_name': GPU_name,
@@ -143,24 +143,38 @@ def Game():
 def Menu():
     global name
     if __name__ != "__main__": return
+    saves:list[str] = [".".join(save.split(".")[:-1]) for save in os.listdir("saves")]
+    print("\033[H\033[2J")
     while True:
-        print("select action")
+        print("\033[H")
+        print("Menu")
+        print("0. exit")
         print("1. new game")
-        print("2. load game")
-        print("3. exit")
-        choice = input(">>>")
+        if saves:
+            print("2. load game")
+        choice = input("\033[2K>>>")
         if choice == "1":
             name = input("enter save name: ")
             new_game(name)
-        elif choice == "2":
-            name = input("enter save name: ")
+        elif choice == "2" and saves:
+            print("List of save files")
+            for idx, name in enumerate(saves):
+                print(f"{idx+1}. `{name}`")
+            print("0. to cancel")
+            choice = input("\033[2Kselect: ")
             try:
-                with open(f"saves/{name}/Eterreem.txt", "r"):
-                    pass  # check if file exists
-                load_save(name)
-            except FileNotFoundError:
-                print("save not found")
-        elif choice == "3":
+                name = saves[int(choice)-1]
+            except ValueError:
+                print("Not a number")
+                continue
+            except IndexError:
+                print("Not a save")
+                continue
+            with open(f"saves/{name}.json", "r"):
+                pass  # check if file exists
+            print("\033[H\033[2J")
+            load_save(name)
+        elif choice == "0":
             exit()
 
 

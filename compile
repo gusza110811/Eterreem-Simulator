@@ -1,0 +1,1 @@
+pyinstaller --onefile --name "Eterreem_Simulator" Eterreem_Simulator.py
